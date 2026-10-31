@@ -1,2 +1,2 @@
-a preview for zesnki_extension
+a preview for zenski_extension
 A tray app that watches for idle time and forces a real rest break: a full-screen, animated 3D character on every monitor, with your keyboard and mouse optionally locked for the duration.
