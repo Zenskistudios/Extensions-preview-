@@ -53,6 +53,15 @@ const CHARACTERS = {
   'use strict';
   const $ = id => document.getElementById(id);
 
+  // If a GIF can't be loaded (usually the gifs/ folder isn't next to index.html),
+  // say which file is missing instead of leaving a blank box.
+  function missingNote(path){
+    const d = document.createElement('div');
+    d.className = 'img-missing';
+    d.textContent = 'Missing ' + path;
+    return d;
+  }
+
   const galleryGrid = $('gallery-grid');
   Object.keys(CHARACTERS).forEach(key => {
     const cfg = CHARACTERS[key];
@@ -67,6 +76,8 @@ const CHARACTERS = {
       <div class="tag">${cfg.type === 'horror' ? 'UPSIDE DOWN' : 'PET'}</div>
       <div class="go">Preview →</div>
     `;
+    const thumbImg = card.querySelector('img');
+    thumbImg.onerror = () => thumbImg.replaceWith(missingNote(cfg.gif));
     card.onclick = () => showOverlay(key, true);
     galleryGrid.appendChild(card);
   });
@@ -150,6 +161,8 @@ const CHARACTERS = {
     $('char-name').textContent = cfg.label;
     $('char-name').style.color = cfg.accent;
     $('char-song').textContent = cfg.label.split(' ').slice(1).join(' ') + ' ' + cfg.song;
+    $('char-gif').alt = 'Missing ' + cfg.gif;
+    $('char-gif').onerror = () => console.error('Could not load ' + cfg.gif + '. The gifs folder must sit next to index.html.');
     $('char-gif').src = cfg.gif;
 
     clearInterval(melodyLoopId);

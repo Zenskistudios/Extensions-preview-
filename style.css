@@ -93,6 +93,7 @@
     display:flex; align-items:center; justify-content:center;
   }
   .char-card .thumb img{ max-width:100%; max-height:100%; object-fit:contain; }
+  .img-missing{ color: var(--red); font-family: var(--mono); font-size:11px; padding:10px; text-align:center; }
   .char-card .name{ font-size:15px; font-weight:600; }
   .char-card .desc{ font-size:12px; color: var(--dim); line-height:1.5; min-height:32px; }
   .char-card .tag{
