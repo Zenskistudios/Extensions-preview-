@@ -42,7 +42,7 @@ const CHARACTERS = {
     melody: [[147, 0.2], [147, 0.2], [165, 0.2], [147, 0.2], [131, 0.4]]
   },
   eleven: {
-    label: '⚡ Eleven', type: 'pet', accent: '#66e0ff',
+    label: 'Spiderman', type: 'Spidey', accent: '#66e0ff',
     gif: GIFS.eleven,
     song: 'telekinetic disco',
     melody: [[880, 0.12], [988, 0.12], [1046, 0.12], [1318, 0.24], [988, 0.3]]
