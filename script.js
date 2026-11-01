@@ -6,13 +6,13 @@ const CHARACTERS = {
     melody: [[523, 0.18], [659, 0.18], [784, 0.18], [659, 0.18], [523, 0.3]]
   },
   dog: {
-    label: '🐶 Biscuit the Dog', type: 'pet', accent: '#ffcf9e',
+    label: 'Angry bird', type: 'pet', accent: '#ffcf9e',
     gif: GIFS.dog,
     song: 'tail-wagging chaos ensues',
     melody: [[392, 0.15], [392, 0.15], [523, 0.2], [440, 0.2], [392, 0.3]]
   },
   rabbit: {
-    label: '🐰 Bun-Bun the Rabbit', type: 'pet', accent: '#ffe6f5',
+    label: 'Dragon ball 1', type: 'pet', accent: '#ffe6f5',
     gif: GIFS.rabbit,
     song: 'a surprisingly funky hop',
     melody: [[659, 0.12], [784, 0.12], [880, 0.12], [784, 0.12], [659, 0.24]]
@@ -30,19 +30,19 @@ const CHARACTERS = {
     melody: [[130, 0.5], [123, 0.5], [110, 0.6], [98, 0.9]]
   },
   mindflayer: {
-    label: '🕷️ Mind Flayer', type: 'horror', accent: '#9b5cff',
+    label: 'Thanos', type: 'horror', accent: '#9b5cff',
     gif: GIFS.mindflayer,
     song: 'orchestral horror swells',
     melody: [[80, 0.6], [85, 0.4], [75, 0.6], [65, 1.0]]
   },
   demodogs: {
-    label: '🐕 Demo-dogs', type: 'horror', accent: '#ff7a3d',
+    label: 'Dragon ball2', type: 'horror', accent: '#ff7a3d',
     gif: GIFS.demodogs,
     song: 'pack singing, off in the distance',
     melody: [[147, 0.2], [147, 0.2], [165, 0.2], [147, 0.2], [131, 0.4]]
   },
   eleven: {
-    label: '⚡ Eleven', type: 'pet', accent: '#66e0ff',
+    label: 'Spidey', type: 'pet', accent: '#66e0ff',
     gif: GIFS.eleven,
     song: 'telekinetic disco',
     melody: [[880, 0.12], [988, 0.12], [1046, 0.12], [1318, 0.24], [988, 0.3]]
