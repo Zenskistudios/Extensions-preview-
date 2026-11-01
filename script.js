@@ -1,49 +1,49 @@
 const CHARACTERS = {
   cat: {
     label: '🐱 Whiskers the Cat', type: 'pet', accent: '#ffe08a',
-    gif: 'gifs/1.gif',
+    gif: GIFS.cat,
     song: 'purrs a cheerful little tune',
     melody: [[523, 0.18], [659, 0.18], [784, 0.18], [659, 0.18], [523, 0.3]]
   },
   dog: {
     label: '🐶 Biscuit the Dog', type: 'pet', accent: '#ffcf9e',
-    gif: 'gifs/9.gif',
+    gif: GIFS.dog,
     song: 'tail-wagging chaos ensues',
     melody: [[392, 0.15], [392, 0.15], [523, 0.2], [440, 0.2], [392, 0.3]]
   },
   rabbit: {
     label: '🐰 Bun-Bun the Rabbit', type: 'pet', accent: '#ffe6f5',
-    gif: 'gifs/6.gif',
+    gif: GIFS.rabbit,
     song: 'a surprisingly funky hop',
     melody: [[659, 0.12], [784, 0.12], [880, 0.12], [784, 0.12], [659, 0.24]]
   },
   demogorgon: {
     label: '👹 Demogorgon', type: 'horror', accent: '#ff3355',
-    gif: 'gifs/3.gif',
+    gif: GIFS.demogorgon,
     song: 'singing from the Upside Down',
     melody: [[110, 0.4], [98, 0.4], [87, 0.5], [73, 0.7]]
   },
   vecna: {
     label: '🧠 Vecna', type: 'horror', accent: '#d6b06a',
-    gif: 'gifs/2.gif',
+    gif: GIFS.vecna,
     song: 'crooning your worst nightmares',
     melody: [[130, 0.5], [123, 0.5], [110, 0.6], [98, 0.9]]
   },
   mindflayer: {
     label: '🕷️ Mind Flayer', type: 'horror', accent: '#9b5cff',
-    gif: 'gifs/5.gif',
+    gif: GIFS.mindflayer,
     song: 'orchestral horror swells',
     melody: [[80, 0.6], [85, 0.4], [75, 0.6], [65, 1.0]]
   },
   demodogs: {
     label: '🐕 Demo-dogs', type: 'horror', accent: '#ff7a3d',
-    gif: 'gifs/4.gif',
+    gif: GIFS.demodogs,
     song: 'pack singing, off in the distance',
     melody: [[147, 0.2], [147, 0.2], [165, 0.2], [147, 0.2], [131, 0.4]]
   },
   eleven: {
     label: '⚡ Eleven', type: 'pet', accent: '#66e0ff',
-    gif: 'gifs/8.gif',
+    gif: GIFS.eleven,
     song: 'telekinetic disco',
     melody: [[880, 0.12], [988, 0.12], [1046, 0.12], [1318, 0.24], [988, 0.3]]
   }
@@ -53,12 +53,11 @@ const CHARACTERS = {
   'use strict';
   const $ = id => document.getElementById(id);
 
-  // If a GIF can't be loaded (usually the gifs/ folder isn't next to index.html),
-  // say which file is missing instead of leaving a blank box.
-  function missingNote(path){
+  // If an image fails to load, say which character instead of leaving a blank box.
+  function missingNote(name){
     const d = document.createElement('div');
     d.className = 'img-missing';
-    d.textContent = 'Missing ' + path;
+    d.textContent = 'Image failed: ' + name;
     return d;
   }
 
@@ -77,7 +76,7 @@ const CHARACTERS = {
       <div class="go">Preview →</div>
     `;
     const thumbImg = card.querySelector('img');
-    thumbImg.onerror = () => thumbImg.replaceWith(missingNote(cfg.gif));
+    thumbImg.onerror = () => thumbImg.replaceWith(missingNote(key));
     card.onclick = () => showOverlay(key, true);
     galleryGrid.appendChild(card);
   });
@@ -161,8 +160,8 @@ const CHARACTERS = {
     $('char-name').textContent = cfg.label;
     $('char-name').style.color = cfg.accent;
     $('char-song').textContent = cfg.label.split(' ').slice(1).join(' ') + ' ' + cfg.song;
-    $('char-gif').alt = 'Missing ' + cfg.gif;
-    $('char-gif').onerror = () => console.error('Could not load ' + cfg.gif + '. The gifs folder must sit next to index.html.');
+    $('char-gif').alt = cfg.label;
+    $('char-gif').onerror = () => console.error('Could not load the image for ' + key + '. Check that gifs.js loads before script.js.');
     $('char-gif').src = cfg.gif;
 
     clearInterval(melodyLoopId);
