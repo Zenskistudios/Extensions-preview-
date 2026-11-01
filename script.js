@@ -18,13 +18,13 @@ const CHARACTERS = {
     melody: [[659, 0.12], [784, 0.12], [880, 0.12], [784, 0.12], [659, 0.24]]
   },
   demogorgon: {
-    label: '👹 Demogorgon', type: 'horror', accent: '#ff3355',
+    label: 'Hulk', type: 'horror', accent: '#ff3355',
     gif: GIFS.demogorgon,
     song: 'singing from the Upside Down',
     melody: [[110, 0.4], [98, 0.4], [87, 0.5], [73, 0.7]]
   },
   vecna: {
-    label: '🧠 Vecna', type: 'horror', accent: '#d6b06a',
+    label: 'Kung fu', type: 'horror', accent: '#d6b06a',
     gif: GIFS.vecna,
     song: 'crooning your worst nightmares',
     melody: [[130, 0.5], [123, 0.5], [110, 0.6], [98, 0.9]]
