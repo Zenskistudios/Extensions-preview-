@@ -5,13 +5,13 @@ const CHARACTERS = {
     song: 'purrs a cheerful little tune',
     melody: [[523, 0.18], [659, 0.18], [784, 0.18], [659, 0.18], [523, 0.3]]
   },
-  dog: {
+  Angry bird: {
     label: 'Angry Bird', type: 'character', accent: '#ffcf9e',
     gif: GIFS.dog,
     song: 'tail-wagging chaos ensues',
     melody: [[392, 0.15], [392, 0.15], [523, 0.2], [440, 0.2], [392, 0.3]]
   },
-  rabbit: {
+  Dragon ball: {
     label: 'Dragon ball', type: 'Flying', accent: '#ffe6f5',
     gif: GIFS.rabbit,
     song: 'a surprisingly funky hop',
