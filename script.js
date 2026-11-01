@@ -5,14 +5,14 @@ const CHARACTERS = {
     song: 'purrs a cheerful little tune',
     melody: [[523, 0.18], [659, 0.18], [784, 0.18], [659, 0.18], [523, 0.3]]
   },
-  Angry bird: {
-    label: 'Angry Bird', type: 'character', accent: '#ffcf9e',
+  dog: {
+    label: '🐶 Biscuit the Dog', type: 'pet', accent: '#ffcf9e',
     gif: GIFS.dog,
     song: 'tail-wagging chaos ensues',
     melody: [[392, 0.15], [392, 0.15], [523, 0.2], [440, 0.2], [392, 0.3]]
   },
-  Dragon ball: {
-    label: 'Dragon ball', type: 'Flying', accent: '#ffe6f5',
+  rabbit: {
+    label: '🐰 Bun-Bun the Rabbit', type: 'pet', accent: '#ffe6f5',
     gif: GIFS.rabbit,
     song: 'a surprisingly funky hop',
     melody: [[659, 0.12], [784, 0.12], [880, 0.12], [784, 0.12], [659, 0.24]]
@@ -42,7 +42,7 @@ const CHARACTERS = {
     melody: [[147, 0.2], [147, 0.2], [165, 0.2], [147, 0.2], [131, 0.4]]
   },
   eleven: {
-    label: 'Spiderman', type: 'Spidey', accent: '#66e0ff',
+    label: '⚡ Eleven', type: 'pet', accent: '#66e0ff',
     gif: GIFS.eleven,
     song: 'telekinetic disco',
     melody: [[880, 0.12], [988, 0.12], [1046, 0.12], [1318, 0.24], [988, 0.3]]
